@@ -6,8 +6,7 @@ import 'package:get/get.dart';
 class SendMoneyBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<SendMoneyInterface>(
-        () => SendMoneyRepository(dio: Get.find(tag: 'abc')));
+    Get.lazyPut<SendMoneyInterface>(() => SendMoneyRepository(dio: Get.find()));
     Get.lazyPut(() => SendMoneyController(sendMoneyInterface: Get.find()));
   }
 }

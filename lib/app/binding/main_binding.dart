@@ -5,6 +5,6 @@ import 'package:get/get_instance/src/bindings_interface.dart';
 class MainBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => Dio(), tag: 'abc');
+    Get.lazyPut(() => Dio());
   }
 }
