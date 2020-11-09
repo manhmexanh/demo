@@ -32,7 +32,7 @@ dependencies:
   dio:
   google_fonts:
   connectivity:
-
+  pull_to_refresh:
 dev_dependencies:
   flutter_test:
     sdk: flutter

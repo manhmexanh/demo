@@ -1,3 +1,4 @@
+import 'package:flutter_base/app/binding/home_binding.dart';
 import 'package:flutter_base/app/binding/send_money_binding.dart';
 import 'package:flutter_base/app/page/home/views/home_view.dart';
 import 'package:flutter_base/app/page/send_money/views/send_money_view.dart';
@@ -10,14 +11,10 @@ class AppPages {
   static const INITIAL = Routes.HOME;
 
   static final routes = [
+    GetPage(name: Routes.HOME, page: () => HomeView(), binding: HomeBinding()),
     GetPage(
-      name: Routes.HOME,
-      page: () => HomeView(),
-    ),
-    GetPage(
-      name: Routes.SEND_MONEY,
-      page: () => SendMoneyView(),
-      binding: SendMoneyBinding(),
-    ),
+        name: Routes.SEND_MONEY,
+        page: () => SendMoneyView(),
+        binding: SendMoneyBinding()),
   ];
 }
