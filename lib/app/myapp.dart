@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       enableLog: true,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      smartManagement: SmartManagement.keepFactory,
     );
   }
 }

@@ -1,8 +1,6 @@
-
-import 'package:flutter_base/app/binding/home_binding.dart';
-import 'package:flutter_base/app/page/home/views/country_view.dart';
-import 'package:flutter_base/app/page/home/views/details_view.dart';
+import 'package:flutter_base/app/binding/send_money_binding.dart';
 import 'package:flutter_base/app/page/home/views/home_view.dart';
+import 'package:flutter_base/app/page/send_money/views/send_money_view.dart';
 import 'package:get/get.dart';
 
 part 'app_routes.dart';
@@ -15,15 +13,11 @@ class AppPages {
     GetPage(
       name: Routes.HOME,
       page: () => HomeView(),
-      binding: HomeBinding(),
     ),
     GetPage(
-      name: Routes.COUNTRY,
-      page: () => CountryView(),
-    ),
-    GetPage(
-      name: Routes.DETAILS,
-      page: () => DetailsView(),
+      name: Routes.SEND_MONEY,
+      page: () => SendMoneyView(),
+      binding: SendMoneyBinding(),
     ),
   ];
 }
