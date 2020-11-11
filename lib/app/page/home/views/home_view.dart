@@ -20,35 +20,27 @@ class HomeView extends ViewStateLess<HomeController> {
       appBar: AppBar(),
       body: Column(
         children: [
-          Expanded(
-              child: Obx(() => SmartRefresher(
-                    header: WaterDropMaterialHeader(),
-                    controller: _refreshController,
-                    onRefresh: () {
-                      controller.fetchDataFromApi(
-                          action: () => _refreshController.refreshCompleted());
-                    },
-                    child: ListView.builder(
-                        itemCount: controller.listCrypto.length,
-                        itemBuilder: (context, index) => ListTile(
-                              title: Text(controller.listCrypto[index].name),
-                              leading:
-                                  Text(controller.listCrypto[index].symbol),
-                            )),
-                  ))),
-          Center(
-            child: FlatButton(
+
+          FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(26),
+                side: BorderSide(color: Colors.grey)),
+            child: Text('Send Money'),
+            onPressed: () {
+              Get.toNamed(Routes.SEND_MONEY);
+            },
+          ) ,
+            FlatButton(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(26),
                   side: BorderSide(color: Colors.grey)),
-              child: Text('Send Money'),
+              child: Text('Payment'),
               onPressed: () {
-                Get.toNamed(Routes.SEND_MONEY);
+                Get.toNamed(Routes.PAYMENT);
               },
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        )
+      );
   }
 }

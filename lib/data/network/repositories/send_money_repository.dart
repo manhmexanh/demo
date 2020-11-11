@@ -26,6 +26,7 @@ class SendMoneyRepository implements SendMoneyInterface {
         ContactModel(name: 'Sebastian Bennett', role: 'Wife'),
         ContactModel(name: 'Carmen Beltrán', role: 'Sister')
       ];
+
       return Future.value(contacts);
     } on Exception catch (e) {
       print(e.toString());
